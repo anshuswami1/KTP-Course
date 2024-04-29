@@ -1,9 +1,8 @@
 import com.faangx.ktp.basics.GreetingMiniApp
 
 fun greet(name: String): String {
-    TODO()
+    return "Namaste $name"
 }
-
 fun main() {
     GreetingMiniApp(::greet)
 }
