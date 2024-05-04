@@ -1,15 +1,23 @@
 import com.faangx.ktp.basics.FactorialCalculatorMiniApp
 
 fun factorialOf(x: Long): Long {
-    TODO()
+    var fact = 1L
+    for(i in 2 .. x){
+        fact = fact* i
+    }
+    return fact
 }
 
 fun permutationsOf(n: Long, r: Long): Long {
-    TODO()
+    var permutations = 1L
+    for(i in (n - r + 1) .. n){
+        permutations = permutations * i
+}
+    return permutations
 }
 
 fun combinationsOf(n: Long, r: Long): Long {
-    TODO()
+    return permutationsOf(n , r) / factorialOf(r)
 }
 
 fun main() {
