@@ -12,4 +12,4 @@ fun printPattern(lines: Int, char: Char) {
 
 fun main() {
     PatternMiniApp("BL", ::printPattern)
-}
+}-+
