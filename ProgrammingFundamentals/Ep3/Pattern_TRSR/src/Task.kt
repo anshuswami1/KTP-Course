@@ -12,4 +12,4 @@ fun printPattern(lines: Int) {
 
 fun main() {
     PatternMiniApp("TRSR", ::printPattern)
-
+}
