@@ -4,8 +4,6 @@ fun printPattern(lines: Int, char1: Char = '*', char2: Char = '-') {
 
 }
 
-
-
 fun main() {
-    PatternMiniApp( "P2", ::printPattern)
+    PatternMiniApp("P2", ::printPattern)
 }

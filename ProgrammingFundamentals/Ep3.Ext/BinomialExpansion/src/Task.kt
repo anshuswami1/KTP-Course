@@ -1,7 +1,9 @@
 import com.faangx.ktp.ext.BinomialExpansionMiniApp
 
 fun printBinomialExpansion(n: Int) {
-    TODO()
+    repeat(n + 1){ i->
+    val coefficient = combinationsof(n , i)
+    }
 }
 
 fun factorialOf(x: Int): Int {
