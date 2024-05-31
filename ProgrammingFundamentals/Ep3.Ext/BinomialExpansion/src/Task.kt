@@ -1,37 +1,39 @@
 import com.faangx.ktp.ext.BinomialExpansionMiniApp
 
 fun printBinomialExpansion(n: Int) {
-    repeat(n + 1){i ->
-        val cofficient = combinationsOf(n , i)
-    val powA = n - 1
-        val powB = i
-    if (cofficient > 1) print ("$cofficient")
-    if(powA > 0) {
-        print("a")
-        if (powA > 1) print("^$powA")
-    }
-        if(powB > 0){
-            print("b")
-            if (powB > 1)print("^$powB")
-        }
-        if(i < n)print (" + ")
-    }
-}
+        repeat(n + 1) { i ->
+            val coefficient = combinationsOf(n, i)
+            val PowA = n - i
+            val PowB = i
+
+            if (coefficient > 1) print("$coefficient")
+
+            if (PowA > 0) {
+                print("a")
+                if (PowA > 1) print("^$PowA")
+            }
+            if (PowB > 0) {
+                print("b")
+                if (PowB > 1) print("^$PowB")
+            }
+            if (i < n) print(" + ")
+        }}
 fun factorialOf(x: Int): Int {
-    for(i in 1 .. x) {
-        if (x % i == 0){
-            print ("$i, ")
+        var fact = 1
+        for (i in 1..x) {
+            fact *= i
         }
-
+        return fact
 }
-}
-
 fun permutationsOf(n: Int, r: Int): Int {
-    TODO()
-}
-
+        var permutation = 1
+        for (i in (n - r + 1)..n) {
+            permutation *= i
+        }
+        return permutation
+    }
 fun combinationsOf(n: Int, r: Int): Int {
-    TODO()
+    return permutationsOf(n, r) / factorialOf(r)
 }
 
 fun main() {
